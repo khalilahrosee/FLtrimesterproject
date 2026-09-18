@@ -1,3 +1,4 @@
+
 :root {
 	--coral: #ef5557;
 	--peach: #f7b87f;
@@ -25,6 +26,23 @@ body {
 	isolation: isolate;
 	background: linear-gradient(115deg, rgba(255, 191, 129, 0.92), rgba(255, 248, 238, 0.88)), var(--cream);
 }
+
+.site-nav {
+	position: absolute;
+	top: 1.5rem;
+	left: 3.25vw;
+	right: 3.25vw;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	z-index: 2;
+}
+
+.nav-logo, .nav-link { color: var(--ink); font-weight: 400; text-decoration: none; }
+.nav-logo { font-size: 1.2rem; letter-spacing: 0.04em; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-link { padding: 0.4rem 0; border-bottom: 1px solid transparent; }
+.nav-link:hover, .nav-link:focus-visible, .nav-link.active { border-bottom-color: currentColor; }
 
 .hero { position: relative; min-height: 100svh; overflow: hidden; }
 
@@ -60,22 +78,6 @@ body {
 	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-.menu {
-	position: relative;
-	padding: 7rem 8vw 8rem;
-	background: var(--cream);
-	color: #544044;
-	text-align: center;
-}
-
-.menu-title { margin: 0; color: var(--coral); font-size: clamp(2rem, 5vw, 4rem); font-weight: 300; letter-spacing: 0.02em; }
-.menu-intro { margin: 0.75rem auto 3rem; font-size: clamp(1rem, 1.6vw, 1.3rem); font-weight: 300; }
-.menu-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; }
-.menu-item { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; }
-.item-name { margin: 0; font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 400; }
-.price { margin: 0.7rem 0 0; color: var(--coral); font-size: 1.25rem; font-weight: 400; }
-.disclaimer { max-width: 760px; margin: 4rem auto 0; font-size: 0.9rem; line-height: 1.5; font-weight: 300; }
-.copyright { margin: 1.5rem 0 0; font-size: 0.85rem; font-weight: 300; }
 .name { margin: 0; font-size: clamp(2.7rem, 6vw, 5.8rem); font-weight: 300; letter-spacing: 0.02em; line-height: 0.95; }
 .slogan { margin: 0.5rem 0 0; font-size: clamp(1rem, 1.8vw, 1.6rem); font-weight: 300; letter-spacing: 0.02em; }
 .email { display: inline-block; margin-top: 1rem; color: inherit; font-size: clamp(0.75rem, 1vw, 0.95rem); font-weight: 300; text-decoration: none; }
@@ -84,8 +86,9 @@ body {
 @media (max-width: 640px) {
 	.page { min-height: 100svh; }
 	.color-fields { inset: 2vh 4vw; grid-template-columns: 2.5fr 1.4fr 0.8fr 0.42fr 0.42fr; gap: 2vw; }
+	.site-nav { top: 1rem; left: 4vw; right: 4vw; }
+	.nav-links { gap: 1rem; }
 	.identity { width: 92vw; aspect-ratio: 1.22; }
 	.name { max-width: 80vw; }
-	.menu { padding: 5rem 7vw 6rem; }
-	.menu-list { grid-template-columns: 1fr; max-width: 360px; }
 }
+
