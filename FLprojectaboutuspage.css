@@ -100,7 +100,6 @@ body {
 .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; margin-top: 2rem; }
 .contact a { color: var(--plum); font-size: 1rem; font-weight: 400; text-decoration-color: var(--coral); text-underline-offset: 0.25em; }
 .contact a:hover, .contact a:focus-visible { color: var(--coral); }
-.home-link { display: inline-block; margin-top: 2rem; color: var(--coral); font-size: 1rem; text-underline-offset: 0.25em; }
 .copyright { padding: 0 8vw 2rem; background: var(--cream); color: var(--plum); text-align: center; font-size: 0.85rem; font-weight: 300; }
 
 @media (max-width: 640px) {
